@@ -1,0 +1,116 @@
+body {
+    background-color:rgba(207, 208, 219, 0.526);
+    margin: 0;
+    font-family: "Century Gothic";
+}
+
+header {
+    background-color: #004080;
+    margin: 0;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.title-name {
+    font-weight: bold;
+    font-size: 34px;
+    padding-left: 20px;
+}
+
+header nav img {
+    width: 60px;
+    float: left;
+    margin-left: 80px;
+    margin-top: -10px;
+}
+
+.side-bar-main-info {
+    display: flex;
+}
+
+.side-bar-main-info aside {
+    display: flex;
+    background-color: #00408090;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 656px;
+    font-size: 26px;
+}
+
+.side-bar-main-info aside a:visited {
+    color: rgb(36, 35, 35);
+}
+
+.side-bar-main-info aside a:hover {
+    color: #004080;
+}
+
+.side-bar-main-info main {
+    display: flex;
+    flex-direction: column;
+    background-color: #cdd9e6;
+    width: 70%;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.side-bar-main-info main article {
+    background-color: #67acf191;
+    margin-top: 30px;
+    width: 75%;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: #004080;
+}
+
+.side-bar-main-info main article h6 {
+    font-size: 28px;
+    margin: 10px 10px;
+}
+
+.side-bar-main-info main article p {
+    margin: 10px 10px;
+}
+
+.side-bar-main-info main .search-bar {
+    display: flex;
+}
+
+.side-bar-main-info main h3 {
+    font-size: 30px;
+    padding: 0px;
+    margin-bottom: 10px;
+    color: #013162;
+}
+
+.side-bar-main-info main .search-bar button {
+    padding: 0px;
+    background-color: rgb(189, 209, 228);
+    border-style: solid;
+    border-color: #004080;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.side-bar-main-info main .search-bar button:hover {
+    cursor: pointer;
+    background-color: #8299b190;
+}
+
+.side-bar-main-info main .search-bar button img {
+    width: 20px;
+}
+
+.side-bar-main-info main .search-bar input {
+    border-style: solid;
+    border-radius: 5px;
+    width: 60%;
+}
