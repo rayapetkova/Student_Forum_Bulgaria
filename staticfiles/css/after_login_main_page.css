@@ -114,3 +114,14 @@ header nav img {
     border-radius: 5px;
     width: 60%;
 }
+
+.side-bar-main-info .social-media-links {
+    display: flex;
+    flex-direction: column;
+    width: 6%;
+    background-color: #e2e9ef;
+}
+
+.side-bar-main-info .social-media-links img {
+    width: 40px;
+}
