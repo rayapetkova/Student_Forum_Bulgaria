@@ -71,6 +71,11 @@ header nav img {
     border-color: #004080;
 }
 
+.side-bar-main-info main article:hover {
+    background-color: #9bc5ef91;
+    cursor: pointer;
+}
+
 .side-bar-main-info main article h6 {
     font-size: 28px;
     margin: 10px 10px;
