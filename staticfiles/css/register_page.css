@@ -44,6 +44,8 @@ header nav a:hover {
     color: rgb(121, 120, 146);
 }
 
+
+
 form {
     background-color: rgb(219, 214, 227);
     margin-left: auto;
@@ -117,7 +119,6 @@ form p span {
 form p span a:hover {
     color: #1e6fbb;
 }
-
 
 
 
