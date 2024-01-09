@@ -1,4 +1,9 @@
+from django.contrib.auth import views as auth_views
 from django.shortcuts import render
+
+
+class LoginUser(auth_views.LoginView):
+    template_name = 'accounts/login_page.html'
 
 
 def register_user(request):
