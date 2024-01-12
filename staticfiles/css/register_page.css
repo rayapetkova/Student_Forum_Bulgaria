@@ -1,129 +1,144 @@
 body {
-    background-color:#cfd0db;
+    background-color:rgb(7 14 39);
     margin: 0;
-    font-family: "Century Gothic"
+    font-family: "Century Gothic";
+    font-size: 12px;
 }
+
+
+
+
+
 
 header {
-    background-color: #004080;
-    margin: 0;
-    padding-top: 23px;
-    padding-bottom: 23px;
-    text-align: center;
-    font-size: 20px;
+    display: flex;
+    padding: 1.2em 10em;
+    align-items: center;
+    font-size: 1.5em;
+    border-bottom: solid;
+    border-color: rgba(255, 255, 255, 0.067);
+    border-width: 0.1em;
 }
 
-.title-name {
-    font-weight: bold;
-    font-size: 34px;
-    padding-left: 20px;
+header img {
+    width: 3em;
+    height: 3em;
 }
 
-header nav img {
-    width: 60px;
-    float: left;
-    margin-left: 80px;
-    margin-top: -10px;
+header p {
+    color: white;
 }
 
-header nav svg {
-    padding-bottom: 0px;
-    padding-left: 20px;
+header nav {
+    margin-left: auto;
 }
 
-header nav a:link {
+header nav .nav-links {
+    display: flex;
+    gap: 2em;
+
+}
+
+header nav .nav-links li {
+    list-style: none;
+}
+
+header nav .nav-links li a {
     text-decoration: none;
-    color:rgb(178, 172, 165);
+    color: white;
 }
 
-header nav a:visited {
-    color:rgb(171, 158, 242);
+header button {
+    background-color: rgb(22 32 68);
+    border-style: none;
+    border-radius: 0.2em;
+    padding: 0.5em 0.5em;
+    margin-left: 2em;
+    color: rgba(255, 255, 255, 0.595);
+    cursor: pointer;
 }
 
-header nav a:hover {
-    color: rgb(121, 120, 146);
-}
+
+
+
 
 
 
 form {
-    background-color: rgb(219, 214, 227);
+    display: flex;
+    background-color: rgb(32 41 78);
+    flex-direction: column;
+    align-items: center;
+    width: 40em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
-    font-size: 24px;
-    width: 400px;
-    padding: 40px;
-    text-align: center;
+    margin-top: 8em;
+    padding: 1.3em 4em;
     border-style: solid;
-    border-radius: 20px;
-    border-color: #004080;
-    border-width: 2px;
+    border-radius: 1.5em;
+    border-color: rgba(255, 255, 255, 0.595);
+    border-width: 0.2em;
+}
+
+form .register-title {
+    color: rgba(255, 255, 255, 0.521);
+    font-size: 3em;
+    font-weight: 800;
+    margin: 0.5em;
+}
+
+form p {
+    font-size: 1.5em;
 }
 
 form button {
-    width: 300px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    width: 55%;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
     border-style: solid;
-    border-radius: 20px;
-    border-color: #031425;
-    background-color: #004080;
-    color: white;
+    border-radius: 0.8em;
+    background-color: rgb(91, 101, 143);
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #506c89;
+    background-color: rgb(130, 140, 178);
 }
 
-form .login-title {
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    margin: 0 auto;
-    width: 150px;
+form .login-account {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.595);
 }
 
-form p label, form p input {
-    display: block;
-    margin: 0 auto;
+form .login-account a {
+    color: rgba(241, 238, 244, 0.275);
 }
 
-form p label {
-    font-size: 15px;
-    margin-top: 3px;
+form .login-new-account a:visited {
+    color: rgb(241, 238, 244);
 }
 
-form p label {
-    float: left;
-    margin-left: 50px;
-    margin-right: -40px;
-}
-
-form p input {
-    border-radius: 6px;
-    width: 180px;
-    height: 20px;
-}
-
-form .sign-up-new-account {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-form p span {
-    font-size: 15px;
-}
-
-form p span a:hover {
-    color: #1e6fbb;
+form .login-new-account a:hover {
+    color: rgba(255, 255, 255, 0.489);
 }
 
 
 
-footer {
+
+
+
+
+
+
+
+
+
+
+
+/* footer {
     background-color: #004080;
-    margin-top: 86px;
+    margin-top: 162px;
     padding: 55px;
-}
+} */
+
