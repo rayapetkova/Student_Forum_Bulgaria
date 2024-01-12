@@ -1,132 +1,165 @@
 body {
-    background-color:rgba(207, 208, 219, 0.526);
+    background-color:rgb(7 14 39);
     margin: 0;
     font-family: "Century Gothic";
+    font-size: 12px;
+    margin-bottom: 5%;
 }
+
+
+
+
+
 
 header {
-    background-color: #004080;
-    margin: 0;
-    padding-top: 23px;
-    padding-bottom: 23px;
-    text-align: center;
-    font-size: 20px;
-}
-
-.title-name {
-    font-weight: bold;
-    font-size: 34px;
-    padding-left: 20px;
-}
-
-header nav img {
-    width: 60px;
-    float: left;
-    margin-left: 80px;
-    margin-top: -10px;
-}
-
-.side-bar-main-info {
     display: flex;
-}
-
-.side-bar-main-info aside {
-    display: flex;
-    background-color: #00408090;
-    flex-direction: column;
-    width: 25%;
-    height: 100%;
-    flex-wrap: wrap;
-    align-content: center;
+    padding: 1.2em 10em;
     align-items: center;
-    justify-content: center;
-    height: 656px;
-    font-size: 26px;
+    font-size: 1.5em;
+    border-bottom: solid;
+    border-color: rgba(255, 255, 255, 0.067);
+    border-width: 0.1em;
+    position: sticky;
 }
 
-.side-bar-main-info aside a:visited {
-    color: rgb(36, 35, 35);
+header img {
+    width: 3em;
+    height: 3em;
 }
 
-.side-bar-main-info aside a:hover {
-    color: #004080;
+header p {
+    color: white;
 }
 
-.side-bar-main-info main {
+header nav {
+    margin-left: auto;
+}
+
+header nav .nav-links {
+    display: flex;
+    gap: 2em;
+
+}
+
+header nav .nav-links li {
+    list-style: none;
+}
+
+header nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+header button {
+    background-color: rgb(22 32 68);
+    border-style: none;
+    border-radius: 0.2em;
+    padding: 0.5em 0.5em;
+    margin-left: 2em;
+    color: rgba(255, 255, 255, 0.595);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+main {
     display: flex;
     flex-direction: column;
-    background-color: #cdd9e6;
-    width: 70%;
     flex-wrap: wrap;
     align-content: center;
 }
 
-.side-bar-main-info main article {
-    background-color: #67acf191;
-    margin-top: 30px;
+main > img {
+    width: 30%;
+    margin-left: auto;
+}
+
+main .search-bar {
+    display: flex;
+}
+
+main h3 {
+    font-size: 2.5em;
+    padding: 0em;
+    margin-bottom: 0.5em;
+    color: rgba(255, 255, 255, 0.521);
+}
+
+main .search-bar button {
+    padding: 0em;
+    background-color: rgb(22 32 68);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.595);
+    border-radius: 0.5em;
+    padding: 0.2em;
+}
+
+main .search-bar button:hover {
+    cursor: pointer;
+    background-color: #536a8290;
+}
+
+main .search-bar button img {
+    width: 1.5em;
+}
+
+main .search-bar input {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.595);
+    border-radius: 0.5em;
+    width: 60%;
+}
+
+main article {
+    background-color: rgb(61, 71, 110);
+    margin-top: 2.5em;
     width: 75%;
     border-style: solid;
     border-width: 3px;
     border-radius: 10px;
-    border-color: #004080;
+    border-color: rgba(255, 255, 255, 0.595);
+    color: rgba(255, 255, 255, 0.595);
 }
 
-.side-bar-main-info main article:hover {
+main article:hover {
     background-color: #9bc5ef91;
+    color: rgb(7 14 39);
     cursor: pointer;
 }
 
-.side-bar-main-info main article h6 {
-    font-size: 28px;
-    margin: 10px 10px;
+main article h6 {
+    font-size: 2.3em;
+    margin: 0.5em 0.5em;
 }
 
-.side-bar-main-info main article p {
-    margin: 10px 10px;
+main article p {
+    margin: 1.3em 1.3em;
 }
 
-.side-bar-main-info main .search-bar {
-    display: flex;
-}
 
-.side-bar-main-info main h3 {
-    font-size: 30px;
-    padding: 0px;
-    margin-bottom: 10px;
-    color: #013162;
-}
 
-.side-bar-main-info main .search-bar button {
-    padding: 0px;
-    background-color: rgb(189, 209, 228);
-    border-style: solid;
-    border-color: #004080;
-    border-radius: 5px;
-    padding: 3px;
-}
 
-.side-bar-main-info main .search-bar button:hover {
-    cursor: pointer;
-    background-color: #8299b190;
-}
 
-.side-bar-main-info main .search-bar button img {
-    width: 20px;
-}
 
-.side-bar-main-info main .search-bar input {
-    border-style: solid;
-    border-radius: 5px;
-    width: 60%;
-}
 
-.side-bar-main-info .social-media-links {
+
+
+
+
+/* .main-info .social-media-links {
     display: flex;
     flex-direction: column;
     width: 6%;
     background-color: #e2e9ef;
 }
 
-.side-bar-main-info .social-media-links img {
+.main-info .social-media-links img {
     width: 40px;
-}
+} */
+
