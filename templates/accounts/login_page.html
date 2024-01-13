@@ -1,3 +1,4 @@
+{% load custom_filters %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -39,19 +40,9 @@
 
         <p class="login-title">Log In</p>
 
-        {{ form.as_p }}
+        {{ form.username|placeholder:'Email' }}
+        {{ form.password|placeholder:'Password' }}
 
-{##}
-{#        <p class="login-labels-and-inputs">#}
-{#            <label for="email-field">Email</label>#}
-{#            <input type="text" placeholder="Enter your email" class="first-input" id="email-field">#}
-{#        </p>#}
-{##}
-{#        <p class="login-labels-and-inputs">#}
-{#            <label for="password-field">Password</label>#}
-{#            <input type="password" placeholder="Password" class="second-input" id="password-field">#}
-{#        </p>#}
-{##}
         <button>
             Log In
         </button>
