@@ -3,11 +3,12 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
-from accounts_users.forms import RegisterUserForm
+from accounts_users.forms import RegisterUserForm, LoginUserForm
 
 
 class LoginUser(auth_views.LoginView):
     template_name = 'accounts/login_page.html'
+    form_class = LoginUserForm
 
 
 class RegisterUser(CreateView):
