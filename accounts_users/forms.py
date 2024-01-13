@@ -1,11 +1,23 @@
 from django.contrib.auth import forms as auth_forms, get_user_model
-from django.contrib.auth.forms import UsernameField
 from django import forms
 
 from accounts_users.models import ProfileUser
 from django.utils.translation import gettext_lazy as _
 
 UserModel = get_user_model()
+
+
+class LoginUserForm(auth_forms.AuthenticationForm):
+
+    class Meta:
+        model = UserModel
+        fields = ('email', 'password')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['username'].widget.attrs['class'] = 'form-input-fields'
+        self.fields['password'].widget.attrs['class'] = 'form-input-fields'
 
 
 class RegisterUserForm(auth_forms.UserCreationForm):
