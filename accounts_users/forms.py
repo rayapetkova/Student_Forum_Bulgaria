@@ -35,6 +35,15 @@ class RegisterUserForm(auth_forms.UserCreationForm):
     class Meta:
         model = UserModel
         fields = ('first_name', 'last_name', 'email', 'password1', 'password2')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['first_name'].widget.attrs['class'] = 'form-input-fields'
+        self.fields['last_name'].widget.attrs['class'] = 'form-input-fields'
+        self.fields['email'].widget.attrs['class'] = 'form-input-fields'
+        self.fields['password1'].widget.attrs['class'] = 'form-input-fields'
+        self.fields['password2'].widget.attrs['class'] = 'form-input-fields'
     
     def save(self, commit=True):
         user = super().save(commit=commit)
