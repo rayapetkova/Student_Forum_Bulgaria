@@ -23,9 +23,5 @@ class RegisterUser(CreateView):
         return result
 
 
-def login_user(request):
-    return render(request, 'accounts/login_page.html')
-
-
 def main_view(request):
     return render(request, 'main_pages/after_login_main_page.html')
