@@ -54,8 +54,12 @@ header button {
     border-radius: 0.2em;
     padding: 0.5em 0.5em;
     margin-left: 2em;
-    color: rgba(255, 255, 255, 0.595);
     cursor: pointer;
+}
+
+header button a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.595);
 }
 
 
