@@ -28,7 +28,10 @@
 
         </nav>
 
-        <button>Sign Up</button>
+        {% if request.user.is_authenticated %}
+            <button><a href="{% url 'logout-user' %}">Log Out</a></button>
+        {% endif %}
+
 
     </header>
 
