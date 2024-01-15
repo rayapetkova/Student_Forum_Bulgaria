@@ -28,7 +28,7 @@
 
         </nav>
 
-        <button>Log In</button>
+        <button><a href="{% url 'login-user' %}">Log In</a></button>
         
     </header>
 
@@ -38,7 +38,7 @@
 
         {% csrf_token %}
 
-        <p class="register-title">Register</p>
+        <p class="register-title">Sign Up</p>
 
         {{ form.first_name|placeholder:'First name' }}
         {{ form.last_name|placeholder:'Last name' }}
