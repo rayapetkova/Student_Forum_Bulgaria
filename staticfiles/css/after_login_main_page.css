@@ -27,7 +27,8 @@ header img {
     height: 3em;
 }
 
-header p {
+header p a {
+    text-decoration: none;
     color: white;
 }
 
@@ -143,7 +144,8 @@ main article h6 {
 }
 
 main article p {
-    margin: 1.3em 1.3em;
+    font-size: 1.3em;
+    margin: 1.3em 1em;
 }
 
 

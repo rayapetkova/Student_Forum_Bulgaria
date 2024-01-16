@@ -12,8 +12,8 @@
 
     <header>
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Light_bulb_%28yellow%29_icon.svg/2048px-Light_bulb_%28yellow%29_icon.svg.png" alt="student-forum-logo">
-        <p class="title-name">Student Forum</p>
+        <a href="{% url 'subjects-list' %}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Light_bulb_%28yellow%29_icon.svg/2048px-Light_bulb_%28yellow%29_icon.svg.png" alt="student-forum-logo"></a>
+        <p class="title-name"><a href="{% url 'subjects-list' %}">Student Forum</a></p>
 
         <nav>
 
@@ -47,35 +47,12 @@
             </div>
         </div>
 
-        <article onclick="location.href='../login_page/login.html'">
-            <h6>History</h6>
-            <p>These are the subject's topics</p>
-        </article>
-
-        <article onclick="location.href='../login_page/login.html'">
-            <h6>English</h6>
-            <p>These are the subject's topics</p>
-        </article>
-
-        <article onclick="location.href='../login_page/login.html'">
-            <h6>Chemistry</h6>
-            <p>These are the subject's topics</p>
-        </article>
-
-        <article onclick="location.href='../login_page/login.html'">
-            <h6>Physics</h6>
-            <p>These are the subject's topics</p>
-        </article>
-
-        <article onclick="location.href='../login_page/login.html'">
-            <h6>Physics</h6>
-            <p>These are the subject's topics</p>
-        </article>
-
-        <article onclick="location.href='../login_page/login.html'">
-            <h6>Physics</h6>
-            <p>These are the subject's topics</p>
-        </article>
+        {% for object in object_list %}
+            <article onclick="location.href='../login_page/login.html'">
+                <h6>{{ object.name }}</h6>
+                <p>{{ object.description }}</p>
+            </article>
+        {% endfor %}
 
         <!-- <img src="blue_wave.png" alt="blue-wave" class="blue-wave-"> -->
 
