@@ -14,7 +14,7 @@ class LoginUser(auth_views.LoginView):
 class RegisterUser(CreateView):
     template_name = 'accounts/register_page.html'
     form_class = RegisterUserForm
-    success_url = reverse_lazy('main-page')
+    success_url = reverse_lazy('subjects-list')
 
     def form_valid(self, form):
         result = super().form_valid(form)
@@ -32,5 +32,5 @@ def logout_user(request):
     return redirect('login-user')
 
 
-def main_view(request):
-    return render(request, 'main_pages/after_login_main_page.html')
+# def main_view(request):
+#     return render(request, 'main_pages/after_login_main_page.html')
