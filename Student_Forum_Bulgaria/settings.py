@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'accounts_users'
+    'accounts_users',
+    'topics'
 ]
 
 MIDDLEWARE = [
@@ -140,6 +141,6 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = reverse_lazy('login-user')
-LOGIN_REDIRECT_URL = reverse_lazy('main-page')
+LOGIN_REDIRECT_URL = reverse_lazy('subjects-list')
 
 AUTH_USER_MODEL = "accounts_users.AppUser"
