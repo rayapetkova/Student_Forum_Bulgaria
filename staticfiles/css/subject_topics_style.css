@@ -1,0 +1,184 @@
+body {
+    background-color:rgb(7 14 39);
+    margin: 0;
+    font-family: "Century Gothic";
+    font-size: 12px;
+    margin-bottom: 5%;
+}
+
+
+
+
+
+
+header {
+    display: flex;
+    padding: 1.2em 10em;
+    align-items: center;
+    font-size: 1.5em;
+    border-bottom: solid;
+    border-color: rgba(255, 255, 255, 0.067);
+    border-width: 0.1em;
+    position: sticky;
+}
+
+header img {
+    width: 3em;
+    height: 3em;
+}
+
+header p a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav .nav-links {
+    display: flex;
+    gap: 2em;
+
+}
+
+header nav .nav-links li {
+    list-style: none;
+}
+
+header nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+header button {
+    background-color: rgb(22 32 68);
+    border-style: none;
+    border-radius: 0.2em;
+    padding: 0.5em 0.5em;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+header button a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.595);
+}
+
+
+
+
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+main > img {
+    width: 30%;
+    margin-left: auto;
+}
+
+main .search-bar {
+    display: flex;
+}
+
+main h3, h4 {
+    font-size: 2.5em;
+    padding: 0em;
+    margin-bottom: 0.5em;
+    color: rgba(255, 255, 255, 0.521);
+}
+
+main .search-bar button {
+    padding: 0em;
+    background-color: rgb(22 32 68);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.595);
+    border-radius: 0.5em;
+    padding: 0.2em;
+}
+
+main .search-bar button:hover {
+    cursor: pointer;
+    background-color: #536a8290;
+}
+
+main .search-bar button img {
+    width: 1.5em;
+}
+
+main .search-bar input {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.595);
+    border-radius: 0.5em;
+    width: 60%;
+}
+
+main h4 {
+    font-size: 1.6em;
+    margin-top: 3em;
+    margin-bottom: 0px;
+}
+
+main article {
+    background-color: rgb(61, 71, 110);
+    margin-top: 2.5em;
+    width: 75%;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0.595);
+    color: rgba(255, 255, 255, 0.595);
+}
+
+main article.main-question:hover {
+    background-color: #9bc5ef91;
+    color: rgb(7 14 39);
+}
+
+main article.main-question h6 {
+    font-size: 2.3em;
+    margin: 0.5em 0.5em;
+}
+
+main article p {
+    margin: 1.3em 1.3em;
+}
+
+main article:not(.main-question) {
+    width: 70%;
+    align-self: center;
+    border-radius: 3px;
+    background-color: rgb(31 40 73);
+    border-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .main-info .social-media-links {
+    display: flex;
+    flex-direction: column;
+    width: 6%;
+    background-color: #e2e9ef;
+}
+
+.main-info .social-media-links img {
+    width: 40px;
+} */
+
