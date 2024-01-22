@@ -121,6 +121,11 @@ main .search-bar input {
     width: 60%;
 }
 
+main article a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.595);
+}
+
 main article {
     background-color: rgb(61, 71, 110);
     margin-top: 2.5em;
@@ -129,7 +134,6 @@ main article {
     border-width: 3px;
     border-radius: 10px;
     border-color: rgba(255, 255, 255, 0.595);
-    color: rgba(255, 255, 255, 0.595);
 }
 
 main article:hover {

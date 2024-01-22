@@ -48,9 +48,13 @@
         </div>
 
         {% for object in object_list %}
-            <article onclick="location.href='../login_page/login.html'">
-                <h6>{{ object.name }}</h6>
-                <p>{{ object.description }}</p>
+            <article>
+
+                <a href="{% url 'subject-topics' subject_id=object.id %}">
+                    <h6>{{ object.name }}</h6>
+                    <p>{{ object.description }}</p>
+                </a>
+
             </article>
         {% endfor %}
 
