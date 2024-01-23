@@ -1,3 +1,6 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+
 body {
     background-color:rgb(7 14 39);
     margin: 0;
@@ -90,10 +93,8 @@ main .search-bar {
     display: flex;
 }
 
-main h3, h4 {
+main h3, main h4 {
     font-size: 2.5em;
-    padding: 0em;
-    margin-bottom: 0.5em;
     color: rgba(255, 255, 255, 0.521);
 }
 
@@ -124,19 +125,43 @@ main .search-bar input {
 
 main h4 {
     font-size: 1.6em;
-    margin-top: 3em;
-    margin-bottom: 0px;
+}
+
+main .comment-section{
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+main .comment-section a {
+    background-color: rgba(255, 255, 255, 0.521);
+    margin-left: auto;
+    text-align: center;
+    padding: 0.8em 1em;
+    border-radius: 2em;
+}
+
+main .comment-section a:hover {
+    background-color: rgba(183, 183, 183, 0.52);
+}
+
+main .comment-section a i {
+    color:rgb(7 14 39);
 }
 
 main article {
     background-color: rgb(61, 71, 110);
-    margin-top: 2.5em;
+    margin-bottom: 2.5em;
     width: 75%;
     border-style: solid;
     border-width: 3px;
     border-radius: 10px;
     border-color: rgba(255, 255, 255, 0.595);
     color: rgba(255, 255, 255, 0.595);
+}
+
+main article.main-question {
+    margin-top: 2em;
 }
 
 main article.main-question:hover {

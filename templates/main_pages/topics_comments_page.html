@@ -50,7 +50,10 @@
             <p>Author: {{ topic.user.profileuser.first_name}} {{ topic.user.profileuser.last_name }} </p>
         </article>
 
-        <h4>Comments:</h4>
+        <section class="comment-section">
+            <h4>Comments:</h4>
+            <a href="#"><i class="fa-solid fa-plus"></i></a>
+        </section>
 
         {% for comment in comments %}
 
