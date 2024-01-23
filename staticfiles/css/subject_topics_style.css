@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
 body {
     background-color:rgb(7 14 39);
     margin: 0;
@@ -80,8 +82,30 @@ main > img {
     margin-left: auto;
 }
 
+main .search-bar-and-add {
+    display: flex;
+    align-items: center;
+}
+
+main .search-bar-and-add a {
+    background-color: rgba(255, 255, 255, 0.521);
+    margin-left: auto;
+    text-align: center;
+    padding: 1em 1.2em;
+    border-radius: 2em;
+}
+
+main .search-bar-and-add a i {
+    color:rgb(7 14 39);
+}
+
+main .search-bar-and-add a:hover {
+    background-color: rgba(183, 183, 183, 0.52);
+}
+
 main .search-bar {
     display: flex;
+    width: 70%;
 }
 
 main h3 {
