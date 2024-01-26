@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main_page_style.css' %}">
+</head>
+<body>
+
+    <header>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Light_bulb_%28yellow%29_icon.svg/2048px-Light_bulb_%28yellow%29_icon.svg.png" alt="student-forum-logo">
+        <p class="title-name">Student Forum</p>
+
+        <nav>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <button>Sign Up</button>
+
+    </header>
+
+    <section class="main-section">
+
+        <div class="left-side">
+            <h1>Discuss problems and tasks with others!</h1>
+            <h3>The best place for students and teachers to discuss problems and tasks.</h3>
+
+            <section class="title-and-logo">
+                <h2>Student Forum Bulgaria</h2>
+                <hr>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Light_bulb_%28yellow%29_icon.svg/2048px-Light_bulb_%28yellow%29_icon.svg.png" alt="student-forum-logo">
+            </section>
+
+        </div>
+
+        <div class="right-side">
+            <img src="{% static 'images/some_img.png' %}" alt="some-img">
+        </div>
+
+    </section>
+
+</body>
+</html>
