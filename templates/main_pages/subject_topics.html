@@ -12,13 +12,13 @@
 
     <header>
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Light_bulb_%28yellow%29_icon.svg/2048px-Light_bulb_%28yellow%29_icon.svg.png" alt="student-forum-logo">
-        <p class="title-name">Student Forum</p>
+        <a href="{% url 'main-page' %}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Light_bulb_%28yellow%29_icon.svg/2048px-Light_bulb_%28yellow%29_icon.svg.png" alt="student-forum-logo"></a>
+        <p class="title-name"><a href="{% url 'main-page' %}">Student Forum</a></p>
                 
         <nav>
             <ul class="nav-links">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="{% url 'main-page' %}">Home</a>
                 </li>
                 <li>
                     <a href="#">About us</a>
@@ -26,7 +26,7 @@
             </ul>
         </nav>
 
-        <button>Sign Up</button>
+        <button><a href="{% url 'register-user' %}">Sign Up</a></button>
         
     </header>
 
