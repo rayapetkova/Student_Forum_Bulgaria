@@ -21,7 +21,6 @@ header {
     border-bottom: solid;
     border-color: rgba(255, 255, 255, 0.067);
     border-width: 0.1em;
-    position: sticky;
 }
 
 header img {
@@ -29,7 +28,8 @@ header img {
     height: 3em;
 }
 
-header p {
+header p a {
+    text-decoration: none;
     color: white;
 }
 
@@ -58,8 +58,12 @@ header button {
     border-radius: 0.2em;
     padding: 0.5em 0.5em;
     margin-left: 2em;
-    color: rgba(255, 255, 255, 0.595);
     cursor: pointer;
+}
+
+header button a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.595);
 }
 
 
