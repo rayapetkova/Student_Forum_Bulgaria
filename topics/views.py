@@ -9,6 +9,10 @@ class SubjectsListView(ListView):
     template_name = 'main_pages/after_login_main_page.html'
 
 
+def main_page(request):
+    return render(request, 'main_pages/main_page.html')
+
+
 def subject_topics(request, subject_id):
 
     current_subject_topics = Topic.objects.filter(subject_id=subject_id)
