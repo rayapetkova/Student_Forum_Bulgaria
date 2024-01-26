@@ -1,0 +1,131 @@
+body {
+    background-color:rgb(7 14 39);
+    margin: 0;
+    font-family: "Century Gothic";
+    font-size: 12px;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+header {
+    display: flex;
+    padding: 1.2em 10em;
+    align-items: center;
+    font-size: 1.5em;
+    border-bottom: solid;
+    border-color: rgba(255, 255, 255, 0.067);
+    border-width: 0.1em;
+    position: sticky;
+}
+
+header img {
+    width: 3em;
+    height: 3em;
+}
+
+header p {
+    color: white;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav .nav-links {
+    display: flex;
+    gap: 2em;
+
+}
+
+header nav .nav-links li {
+    list-style: none;
+}
+
+header nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+header button {
+    background-color: rgb(22 32 68);
+    border-style: none;
+    border-radius: 0.2em;
+    padding: 0.5em 0.5em;
+    margin-left: 2em;
+    color: rgba(255, 255, 255, 0.595);
+    cursor: pointer;
+}
+
+
+
+
+
+
+section.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+
+section .left-side {
+    color: rgba(255, 255, 255, 0.521);
+    margin-left: 8%;
+    margin-top: 5%;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+section .left-side h1 {
+    font-size: 4em;
+    margin-bottom: 0em;
+}
+
+section .left-side h3 {
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+section .left-side .title-and-logo {
+    display: flex;
+    align-items: center;
+    margin-top: 5em;
+}
+
+section .left-side .title-and-logo h2 {
+    font-size: 3em;
+    width: 45%;
+    flex-wrap: wrap;
+}
+
+body section .left-side .title-and-logo hr {
+    height: 5em;
+    margin-left: 0.1em;
+    margin-right: 0.8em;
+}
+
+body section .left-side .title-and-logo img {
+    height: auto;
+    width: 6em;
+    margin-left: 0.2em;
+}
+
+
+
+
+
+body section .right-side {
+    display: flex;
+    margin-left: auto;
+}
+
+section .right-side img {
+    width: 60em;
+    height: 50em;
+    border-top-left-radius: 1em;
+}
