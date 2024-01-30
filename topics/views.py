@@ -74,3 +74,13 @@ class CreateNewTopic(CreateView):
         context['subject_name'] = subject.name
 
         return context
+
+    def form_valid(self, form):
+        subject_id = self.kwargs['subject_id']
+        user_id = self.kwargs['user_id']
+
+        form.instance.subject_id = subject_id
+        form.instance.user_id = user_id
+        
+        return super().form_valid(form)
+
