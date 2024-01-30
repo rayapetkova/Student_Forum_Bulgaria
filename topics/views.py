@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView
 from django.views.generic import CreateView
 
-from topics.forms import AddNewTopicForm
+from topics.forms import AddNewTopicForm, AddNewCommentForm
 from topics.models import Subject, Topic, Comment
 
 import re
@@ -64,7 +64,7 @@ class CreateNewTopic(CreateView):
 
         # print(str(self.request.META['HTTP_REFERER']))
 
-        matched_subject_id = re.findall(r'\d\/$', str(self.request.META['HTTP_REFERER']))
+        matched_subject_id = re.findall(r'\d{1,}\/$', str(self.request.META['HTTP_REFERER']))
         # print(int(matched_subject_id[0][:-1]))
         subject_id = int(matched_subject_id[0][:-1])
 
@@ -84,3 +84,33 @@ class CreateNewTopic(CreateView):
         
         return super().form_valid(form)
 
+
+class CreateNewComment(CreateView):
+
+    template_name = 'main_pages/add_new_comment.html'
+    form_class = AddNewCommentForm
+    success_url = reverse_lazy('subjects-list')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        matched_topic_id = re.findall(r'\d{1,}\/$', str(self.request.META['HTTP_REFERER']))
+        topic_id = int(matched_topic_id[0][:-1])
+
+        topic = Topic.objects.get(id=topic_id)
+
+        context['topic_id'] = topic.id
+        context['topic_name'] = topic.name
+        context['topic_description'] = topic.description
+        context['subject_name'] = topic.subject.name
+
+        return context
+
+    def form_valid(self, form):
+        topic_id = self.kwargs['topic_id']
+        user_id = self.kwargs['user_id']
+
+        form.instance.topic_id = topic_id
+        form.instance.user_id = user_id
+
+        return super().form_valid(form)
