@@ -34,6 +34,15 @@ class Topic(models.Model):
         blank=False
     )
 
+    description = models.TextField(
+        null=False,
+        blank=False,
+        max_length=350,
+        validators=[
+            validators.MinLengthValidator(3)
+        ],
+    )
+
     subject = models.ForeignKey(
         to='Subject',
         on_delete=models.CASCADE

@@ -30,7 +30,3 @@ class RegisterUser(CreateView):
 def logout_user(request):
     logout(request)
     return redirect('login-user')
-
-
-# def main_view(request):
-#     return render(request, 'main_pages/after_login_main_page.html')
