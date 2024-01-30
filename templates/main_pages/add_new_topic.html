@@ -36,7 +36,7 @@
         {% csrf_token %}
 
         <p class="add-new-topic-title">Add new topic</p>
-        <p class="subject-name">History</p>
+        <p class="subject-name">{{ subject_name }}</p>
 
         <section class="input-fields">
             {{ form.name }}
