@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Forum LogIn</title>
+    <link rel="stylesheet" href="{% static 'css/add_new_comment_style.css' %}">
+</head>
+<body>
+
+    <header>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Light_bulb_%28yellow%29_icon.svg/2048px-Light_bulb_%28yellow%29_icon.svg.png" alt="student-forum-logo">
+        <p class="title-name"><a href="{% url 'main-page' %}">Student Forum</a></p>
+
+        <nav>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="{% url 'main-page' %}">Home</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <button><a href="{% url 'register-user' %}">Sign Up</a></button>
+
+    </header>
+
+
+    <main>
+        <article>
+            <h6>{{ topic_name }}</h6>
+            <p>{{ topic_description }}</p>
+        </article>
+
+
+        <form method="POST" action="{% url 'add-new-comment' topic_id=topic_id user_id=request.user.id %}">
+
+            {% csrf_token %}
+
+            <p class="add-new-topic-title">Add new comment</p>
+            <p class="subject-name">{{ subject_name }}</p>
+
+            <section class="input-fields">
+                {{ form.comment_text }}
+            </section>
+
+            <button>
+                Add Comment
+            </button>
+
+        </form>
+    </main>
+
+</body>
+</html>

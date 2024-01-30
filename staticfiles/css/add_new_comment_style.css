@@ -1,0 +1,202 @@
+body {
+    background-color:rgb(7 14 39);
+    margin: 0;
+    font-family: "Century Gothic";
+    font-size: 12px;
+}
+
+
+
+
+
+
+header {
+    display: flex;
+    padding: 1.2em 10em;
+    align-items: center;
+    font-size: 1.5em;
+    border-bottom: solid;
+    border-color: rgba(255, 255, 255, 0.067);
+    border-width: 0.1em;
+}
+
+header img {
+    width: 3em;
+    height: 3em;
+}
+
+header p a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav .nav-links {
+    display: flex;
+    gap: 2em;
+
+}
+
+header nav .nav-links li {
+    list-style: none;
+}
+
+header nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+header button {
+    background-color: rgb(22 32 68);
+    border-style: none;
+    border-radius: 0.2em;
+    padding: 0.5em 0.5em;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+header button a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.595);
+}
+
+
+
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+article {
+    background-color: rgb(61, 71, 110);
+    margin-top: 2.5em;
+    width: 75%;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0.595);
+    color: rgba(255, 255, 255, 0.595);
+}
+
+article:hover {
+    background-color: #9bc5ef91;
+    color: rgb(7 14 39);
+}
+
+article h6 {
+    font-size: 2.3em;
+    margin: 0.5em 0.5em;
+}
+
+article p {
+    margin: 1.3em 1.3em;
+}
+
+
+
+
+
+
+
+
+form {
+    display: flex;
+    background-color: rgb(32 41 78);
+    flex-direction: column;
+    align-items: center;
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    padding: 1.3em 4em;
+    border-style: solid;
+    border-radius: 1.5em;
+    border-color: rgba(255, 255, 255, 0.595);
+    border-width: 0.2em;
+}
+
+form p {
+    color: rgba(255, 255, 255, 0.521);
+    font-size: 3em;
+    font-weight: 800;
+    margin: 0.3em;
+}
+
+form p.subject-name {
+    color: rgba(255, 255, 255, 0.262);
+    margin: 0em 1em;
+    font-size: 2em;
+}
+
+form .input-fields {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 53%;
+}
+
+form .input-fields .comment-text {
+    background: none;
+    border: none;
+    border: solid 0.15em rgba(255, 255, 255, 0.521);
+    font-size: 1.18em;
+    color: rgba(255, 255, 255, 0.521);
+    margin-top: 1em;
+    border-radius: 0.2em;
+    text-overflow: ellipsis;
+}
+
+form .input-fields .comment-text {
+    max-width: 97%;
+    min-width: 97%
+}
+
+form button {
+    width: 55%;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin-top: 1.4em;
+    border-style: solid;
+    border-radius: 0.8em;
+    background-color: rgb(91, 101, 143);
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: rgb(130, 140, 178);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer {
+    background-color: #004080;
+    margin-top: 162px;
+    padding: 55px;
+} */
