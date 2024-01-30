@@ -1,6 +1,6 @@
 from django import forms
 
-from topics.models import Topic
+from topics.models import Topic, Comment
 
 
 class AddNewTopicForm(forms.ModelForm):
@@ -18,3 +18,15 @@ class AddNewTopicForm(forms.ModelForm):
         self.fields['description'].widget.attrs['class'] = 'topic-description'
 
 
+class AddNewCommentForm(forms.ModelForm):
+
+    comment_text = forms.Textarea()
+
+    class Meta:
+        model = Comment
+        fields = ('comment_text',)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['comment_text'].widget.attrs['class'] = 'comment-text'
