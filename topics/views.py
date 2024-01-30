@@ -57,14 +57,20 @@ class CreateNewTopic(CreateView):
 
     template_name = 'main_pages/add_new_topic.html'
     form_class = AddNewTopicForm
-    success_url = reverse_lazy('subject-topics')
+    success_url = reverse_lazy('subjects-list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        matched_subject_id = re.findall(r'\d$', str(self.request.META['HTTP_REFERER']))
-        print(int(matched_subject_id[0]))
+        # print(str(self.request.META['HTTP_REFERER']))
 
-        context['subject_id'] = int(matched_subject_id[0])
+        matched_subject_id = re.findall(r'\d\/$', str(self.request.META['HTTP_REFERER']))
+        # print(int(matched_subject_id[0][:-1]))
+        subject_id = int(matched_subject_id[0][:-1])
+
+        subject = Subject.objects.get(id=subject_id)
+
+        context['subject_id'] = subject_id
+        context['subject_name'] = subject.name
 
         return context
