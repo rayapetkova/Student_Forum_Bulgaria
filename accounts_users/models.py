@@ -28,6 +28,12 @@ class AppUser(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
 
 class ProfileUser(models.Model):
 
+    ROLE_CHOICES = (
+        ('Student', 'Student'),
+        ('Teacher', 'Teacher'),
+        ('External User', 'External User')
+    )
+
     first_name = models.CharField(
         max_length=150,
         null=False,
@@ -43,6 +49,17 @@ class ProfileUser(models.Model):
         blank=False,
         validators=[
             validators.MinLengthValidator(2, message="Your last name needs to consist of at least 2 letters!")
+        ]
+    )
+
+    role = models.CharField(
+        max_length=15,
+        choices=ROLE_CHOICES,
+        default='External User',
+        null=False,
+        blank=False,
+        validators=[
+            validators.MinLengthValidator(2, message="Your role needs to consist of at least 2 letters!")
         ]
     )
 
