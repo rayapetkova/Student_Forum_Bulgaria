@@ -188,6 +188,18 @@ main article:not(.main-question) {
 
 
 
+main .no-comments-article {
+    display: flex;
+    justify-content: center;
+}
+
+main no-comments-article .no-comments-yet {
+    color: rgba(255, 255, 255, 0.521);
+}
+
+
+
+
 
 
 

@@ -64,6 +64,12 @@
 
         {% endfor %}
 
+        {% if not comments %}
+            <article class="no-comments-article">
+                <p class="no-comments-yet">No comments yet</p>
+            </article>
+        {% endif %}
+
 
 
         <!-- <img src="blue_wave.png" alt="blue-wave" class="blue-wave-"> -->
