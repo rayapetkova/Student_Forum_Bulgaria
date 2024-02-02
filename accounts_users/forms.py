@@ -22,6 +22,12 @@ class LoginUserForm(auth_forms.AuthenticationForm):
 
 class RegisterUserForm(auth_forms.UserCreationForm):
 
+    ROLE_CHOICES = (
+        ('Student', 'Student'),
+        ('Teacher', 'Teacher'),
+        ('External User', 'External User')
+    )
+
     first_name = forms.CharField()
     last_name = forms.CharField()
 
@@ -32,9 +38,13 @@ class RegisterUserForm(auth_forms.UserCreationForm):
         help_text=_("Enter the same password as before, for verification."),
     )
 
+    role = forms.ChoiceField(
+        choices=ROLE_CHOICES
+    )
+
     class Meta:
         model = UserModel
-        fields = ('first_name', 'last_name', 'email', 'password1', 'password2')
+        fields = ('first_name', 'last_name', 'email', 'password1', 'password2', 'role')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -44,16 +54,19 @@ class RegisterUserForm(auth_forms.UserCreationForm):
         self.fields['email'].widget.attrs['class'] = 'form-input-fields'
         self.fields['password1'].widget.attrs['class'] = 'form-input-fields'
         self.fields['password2'].widget.attrs['class'] = 'form-input-fields'
+        self.fields['role'].widget.attrs['class'] = 'form-input-role'
     
     def save(self, commit=True):
         user = super().save(commit=commit)
 
         first_name = self.cleaned_data['first_name']
         last_name = self.cleaned_data['last_name']
+        role = self.cleaned_data['role']
 
         user_profile = ProfileUser(
             first_name=first_name,
             last_name=last_name,
+            role=role,
             user=user
         )
 
