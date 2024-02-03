@@ -1,9 +1,12 @@
-from django.contrib.auth import views as auth_views, login, logout
+from django.contrib.auth import views as auth_views, login, logout, get_user_model
+from django.contrib.auth.models import Permission
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
 from accounts_users.forms import RegisterUserForm, LoginUserForm
+
+UserModel = get_user_model()
 
 
 class LoginUser(auth_views.LoginView):
@@ -18,6 +21,19 @@ class RegisterUser(CreateView):
 
     def form_valid(self, form):
         result = super().form_valid(form)
+
+        permission = Permission.objects.get(codename='add_topic')
+        user = UserModel.objects.get(email=form.cleaned_data['email'])
+
+        # print("EI TUKA BE")
+        # print(user)
+        # print(permission)
+        # print(form.cleaned_data)
+
+        current_user_role = form.cleaned_data['role']
+
+        if current_user_role in ('Student', 'Teacher'):
+            user.user_permissions.add(permission)
 
         login(self.request, self.object)
         return result
