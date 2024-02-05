@@ -37,7 +37,10 @@ header nav {
 header nav .nav-links {
     display: flex;
     gap: 2em;
+}
 
+header nav .nav-links li a:hover {
+    color: rgba(255, 255, 255, 0.69);
 }
 
 header nav .nav-links li {
