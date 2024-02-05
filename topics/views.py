@@ -1,10 +1,11 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView
 from django.views.generic import CreateView
 
-from topics.forms import AddNewTopicForm, AddNewCommentForm
+from topics.forms import AddNewTopicForm, AddNewCommentForm, AddNewSubjectForm
 from topics.models import Subject, Topic, Comment
 
 import re
@@ -38,6 +39,7 @@ def subject_topics(request, subject_id):
     return render(request, 'main_pages/subject_topics.html', context=context)
 
 
+@login_required
 def topic_comments(request, topic_id):
 
     curr_topic = Topic.objects.get(id=topic_id)
@@ -51,6 +53,13 @@ def topic_comments(request, topic_id):
     print(curr_topic.user.profileuser.first_name, curr_topic.user.profileuser.last_name)
 
     return render(request, 'main_pages/topics_comments_page.html', context=context)
+
+
+class CreateNewSubject(CreateView):
+
+    template_name = 'main_pages/add_new_subject.html'
+    form_class = AddNewSubjectForm
+    success_url = reverse_lazy('subjects-list')
 
 
 class CreateNewTopic(CreateView):
