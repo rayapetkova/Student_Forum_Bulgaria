@@ -20,7 +20,8 @@ class AddNewTopicForm(forms.ModelForm):
 
 class AddNewCommentForm(forms.ModelForm):
 
-    comment_text = forms.Textarea()
+    comment_text = forms.CharField(widget=forms.Textarea)
+    # comment_text = forms.Textarea()
 
     class Meta:
         model = Comment
