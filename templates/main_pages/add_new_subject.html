@@ -1,0 +1,53 @@
+{% load custom_filters %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Forum LogIn</title>
+    <link rel="stylesheet" href="{% static 'css/add_new_subject_style.css' %}">
+</head>
+<body>
+
+    <header>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Light_bulb_%28yellow%29_icon.svg/2048px-Light_bulb_%28yellow%29_icon.svg.png" alt="student-forum-logo">
+        <p class="title-name"><a href="{% url 'main-page' %}">Student Forum</a></p>
+
+        <nav>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="{% url 'main-page' %}">Home</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <button><a href="{% url 'register-user' %}">Sign Up</a></button>
+
+    </header>
+
+    <form method="POST" action="{% url 'add-new-subject' %}">
+
+        {% csrf_token %}
+
+        <p class="add-new-subject-title">Add new subject</p>
+
+        <section class="input-fields">
+            {{ form.name|placeholder:"Title" }}
+            {{ form.description|placeholder:"Description" }}
+        </section>
+
+        <button>
+            Add Subject
+        </button>
+
+    </form>
+
+</body>
+</html>
