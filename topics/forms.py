@@ -1,6 +1,21 @@
 from django import forms
 
-from topics.models import Topic, Comment
+from topics.models import Topic, Comment, Subject
+
+
+class AddNewSubjectForm(forms.ModelForm):
+
+    description = forms.CharField(widget=forms.Textarea)
+
+    class Meta:
+        model = Subject
+        fields = ('name', 'description')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['name'].widget.attrs['class'] = 'subject-name'
+        self.fields['description'].widget.attrs['class'] = 'subject-description'
 
 
 class AddNewTopicForm(forms.ModelForm):
