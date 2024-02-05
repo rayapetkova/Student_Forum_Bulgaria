@@ -60,9 +60,17 @@ header button {
     cursor: pointer;
 }
 
+header button:hover {
+    background-color: rgb(72, 83, 121);
+}
+
 header button a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.595);
+}
+
+header button:hover a {
+    color: rgb(7, 11, 24);
 }
 
 

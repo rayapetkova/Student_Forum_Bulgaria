@@ -61,10 +61,19 @@ header button {
     cursor: pointer;
 }
 
+header button:hover {
+    background-color: rgb(72, 83, 121);
+}
+
 header button a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.595);
 }
+
+header button:hover a {
+    color: rgb(7, 11, 24);
+}
+
 
 
 
@@ -79,7 +88,7 @@ section.main-section {
 
 section .left-side {
     color: rgba(255, 255, 255, 0.521);
-    margin-left: 8%;
+    margin-left: 15em;
     margin-top: 5%;
     flex-wrap: wrap;
     width: 40%;
