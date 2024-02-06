@@ -27,15 +27,19 @@
 
         </nav>
 
-        <button><a href="{% url 'login-user' %}">Log In</a></button>
+        {% if not request.user.is_authenticated %}
+            <button><a href="{% url 'register-user' %}">Sign Up</a></button>
+        {% else %}
+            <button><a href="{% url 'logout-user' %}">Log Out</a></button>
+        {% endif %}
 
     </header>
 
     <section class="main-section">
 
         <div class="left-side">
-            <h1>Discuss problems and tasks with others!</h1>
-            <h3>The best place for students and teachers to discuss problems and tasks.</h3>
+            <h1>Connect, Learn, and Collaborate: Student Forum Bulgaria!</h1>
+            <h3>Welcome to the Student Forum, where students and teachers come together to collaborate, share knowledge, and overcome challenges. Join the conversation today!</h3>
 
             <section class="title-and-logo">
                 <h2>Student Forum Bulgaria</h2>
