@@ -93,6 +93,18 @@ main {
     align-content: center;
 }
 
+main section.no-topics-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main div.no-topics {
+    color: rgba(255, 255, 255, 0.521);
+    font-size: 2.3em;
+}
+
 main > img {
     width: 30%;
     margin-left: auto;

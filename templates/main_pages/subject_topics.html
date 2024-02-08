@@ -36,10 +36,14 @@
     </header>
 
     <main>
-
-        <h3>Topics</h3>
-
-        <div class="search-bar-and-add">
+        {% if not topics %}
+            <section class="no-topics-section">
+                <h3>Topics</h3>
+                <div class="no-topics">No topics yet</div>
+            </section>
+        {% else %}
+            <h3>Topics</h3>
+            <div class="search-bar-and-add">
 
             <div class="search-bar">
                 <input type="text" placeholder="Search topic...">
@@ -49,18 +53,20 @@
             {% if perms.topics.add_topic %}
                 <a href="{% url 'add-new-topic' subject_id=subject_id user_id=request.user.id %}"><i class="fa-solid fa-plus"></i></a>
             {% endif %}
-        </div>
+            </div>
 
-        {% for topic in topics %}
+            {% for topic in topics %}
 
-            <article>
-                <a href="{% url 'topic-comments' topic_id=topic.id %}">
-                    <h6>{{ topic.name }}</h6>
-                    <p>Author: {{ topic.user.profileuser.first_name }} {{ topic.user.profileuser.last_name }}</p>
-                </a>
-            </article>
+                <article>
+                    <a href="{% url 'topic-comments' topic_id=topic.id %}">
+                        <h6>{{ topic.name }}</h6>
+                        <p>Author: {{ topic.user.profileuser.first_name }} {{ topic.user.profileuser.last_name }}</p>
+                    </a>
+                </article>
 
-        {% endfor %}
+            {% endfor %}
+
+        {% endif %}
 
         <!-- <img src="blue_wave.png" alt="blue-wave" class="blue-wave-"> -->
                 

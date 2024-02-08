@@ -55,22 +55,22 @@
             <a href="{% url 'add-new-comment' topic_id=topic.id user_id=request.user.id %}"><i class="fa-solid fa-plus"></i></a>
         </section>
 
-        {% for comment in comments %}
-
-            <article>
-                <p>{{ comment.comment_text }}</p>
-                <p>{{ comment.user.profileuser.first_name }} {{ comment.user.profileuser.last_name }}</p>
-            </article>
-
-        {% endfor %}
-
         {% if not comments %}
             <article class="no-comments-article">
                 <p class="no-comments-yet">No comments yet</p>
             </article>
+
+        {% else %}
+            {% for comment in comments %}
+
+                <article>
+                    <p>{{ comment.comment_text }}</p>
+                    <p>{{ comment.user.profileuser.first_name }} {{ comment.user.profileuser.last_name }}</p>
+                </article>
+
+            {% endfor %}
+
         {% endif %}
-
-
 
         <!-- <img src="blue_wave.png" alt="blue-wave" class="blue-wave-"> -->
 
