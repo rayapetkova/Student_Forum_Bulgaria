@@ -2,9 +2,10 @@ from django.contrib.auth import views as auth_views, login, logout, get_user_mod
 from django.contrib.auth.models import Permission
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
 from accounts_users.forms import RegisterUserForm, LoginUserForm
+from accounts_users.models import ProfileUser
 
 UserModel = get_user_model()
 
@@ -37,6 +38,32 @@ class RegisterUser(CreateView):
 
         login(self.request, self.object)
         return result
+
+
+class EditUser(UpdateView):
+
+    model = ProfileUser
+    template_name = 'accounts/edit_user_page.html'
+    fields = ('first_name', 'last_name', 'role')
+    success_url = reverse_lazy('main-page')
+
+    def get_object(self, queryset=None):
+        current_logged_user = UserModel.objects.get(id=self.request.user.id)
+        return ProfileUser.objects.get(user=current_logged_user)
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #
+    #     context['profile_form'] = ProfileForm
+    #     return context
+    #
+    # def form_valid(self, form):
+    #     profile_form = ProfileForm(self.request.POST, instance=self.request.user)
+    #
+    #     if profile_form.is_valid():
+    #         profile_form.save()
+    #
+    #     return super().form_valid(form)
 
 
 # class LogOutUser(auth_views.LogoutView):

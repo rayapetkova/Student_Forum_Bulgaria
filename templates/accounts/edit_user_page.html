@@ -1,0 +1,52 @@
+{% load custom_filters %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Forum Register</title>
+    <link rel="stylesheet" href="{% static 'css/register_page.css' %}">
+</head>
+<body>
+
+    <header>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Light_bulb_%28yellow%29_icon.svg/2048px-Light_bulb_%28yellow%29_icon.svg.png" alt="student-forum-logo">
+        <p class="title-name"><a href="{% url 'main-page' %}">Student Forum</a></p>
+
+        <nav>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="{% url 'subjects-list' %}">Home</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <button><a href="{% url 'login-user' %}">Log In</a></button>
+
+    </header>
+
+
+
+    <form method="POST" action="{% url 'edit-user' pk=request.user.id %}">
+
+        {% csrf_token %}
+
+        <p class="register-title">Sign Up</p>
+
+        {{ form.as_p }}
+
+        <button>
+            Edit Profile
+        </button>
+
+    </form>
+
+</body>
+</html>
