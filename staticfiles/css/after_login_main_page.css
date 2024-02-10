@@ -1,5 +1,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
+
 body {
     background-color:rgb(7 14 39);
     margin: 0;
@@ -78,6 +79,13 @@ header button a {
 header button:hover a {
     color: rgb(7, 11, 24);
 }
+
+i {
+    color: rgba(255, 255, 255, 0.595);
+    margin-left: 0.7em;
+    font-size: 1.5em;
+}
+
 
 
 

@@ -78,30 +78,20 @@ header button:hover a {
     color: rgb(7, 11, 24);
 }
 
-i {
-    color: rgba(255, 255, 255, 0.595);
-    margin-left: 0.7em;
-    font-size: 1.5em;
-}
 
 
 
 
 
 
-
-
-
-
-form {
+section {
     display: flex;
     background-color: rgb(32 41 78);
     flex-direction: column;
-    align-items: center;
     width: 40em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10em;
+    margin-top: 8em;
     padding: 1.3em 4em;
     border-style: solid;
     border-radius: 1.5em;
@@ -109,57 +99,57 @@ form {
     border-width: 0.2em;
 }
 
-form p {
+section h2 {
+    align-self: center;
     color: rgba(255, 255, 255, 0.521);
     font-size: 3em;
     font-weight: 800;
     margin: 0.3em;
 }
 
-form p.subject-name {
-    color: rgba(255, 255, 255, 0.262);
-    margin: 0em 1em;
-    font-size: 2em;
+section p {
+    font-size: 1.5em;
+    color: rgba(183, 182, 182, 0.59);
 }
 
-form .input-fields {
+section p span {
+    font-weight: 600;
+}
+
+section .buttons {
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 53%;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
 }
 
-form .input-fields .topic-name, .topic-description {
-    background: none;
-    border: none;
-    border: solid 0.15em rgba(255, 255, 255, 0.521);
-    font-size: 1.18em;
-    color: rgba(255, 255, 255, 0.521);
-    margin-top: 1em;
-    border-radius: 0.2em;
-    text-overflow: ellipsis;
-}
-
-form .input-fields .topic-description {
-    max-width: 97%;
-    min-width: 97%
-}
-
-form button {
+section a {
     width: 55%;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
-    margin-top: 1.4em;
+    margin-top: 1em;
     border-style: solid;
     border-radius: 0.8em;
     background-color: rgb(91, 101, 143);
     cursor: pointer;
+    text-decoration: none;
+    border-color: rgb(7, 11, 24);
+    text-align: center;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.521);
+    color: rgb(7, 11, 24);
+    font-weight: 600;
 }
 
-form button:hover {
+section a:hover {
     background-color: rgb(130, 140, 178);
 }
 
+i {
+    color: rgba(255, 255, 255, 0.595);
+    margin-left: 0.7em;
+    font-size: 1.5em;
+}
 
 
 
@@ -178,3 +168,4 @@ form button:hover {
     margin-top: 162px;
     padding: 55px;
 } */
+

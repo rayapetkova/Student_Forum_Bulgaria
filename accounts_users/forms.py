@@ -74,3 +74,17 @@ class RegisterUserForm(auth_forms.UserCreationForm):
             user_profile.save()
 
         return user
+
+
+class ProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = ProfileUser
+        fields = ('first_name', 'last_name', 'role')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['first_name'].widget.attrs['class'] = 'form-input-fields'
+        self.fields['last_name'].widget.attrs['class'] = 'form-input-fields'
+        self.fields['role'].widget.attrs['class'] = 'form-input-role'

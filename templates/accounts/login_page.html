@@ -28,7 +28,12 @@
 
         </nav>
 
-        <button><a href="{% url 'register-user' %}">Sign Up</a></button>
+        {% if not request.user.is_authenticated %}
+            <button><a href="{% url 'register-user' %}">Sign Up</a></button>
+        {% else %}
+            <button><a href="{% url 'logout-user' %}">Log Out</a></button>
+            <a href="{% url 'details-user' %}"><i class="fa-solid fa-user"></i></a>
+        {% endif %}
 
     </header>
 

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Forum Register</title>
-    <link rel="stylesheet" href="{% static 'css/edit_user.css' %}">
+    <link rel="stylesheet" href="{% static 'css/details_user_styling.css' %}">
 </head>
 <body>
 
@@ -37,23 +37,18 @@
 
     </header>
 
+    <section>
+        <h2>Profile Details</h2>
+        <p><span>Email:</span> {{ request.user.email }}</p>
+        <p><span>First name:</span> {{ object.first_name }}</p>
+        <p><span>Last name:</span> {{ object.last_name }}</p>
+        <p><span>Role:</span> {{ object.role }}</p>
 
-
-    <form method="POST" action="{% url 'edit-user' %}">
-
-        {% csrf_token %}
-
-        <p class="register-title">Edit Profile</p>
-
-        {{ form.first_name }}
-        {{ form.last_name }}
-        {{ form.role }}
-
-        <button>
-            Edit Profile
-        </button>
-
-    </form>
+        <div class="buttons">
+            <a class="edit-button" href="{% url 'edit-user' %}">Edit</a>
+            <a class="delete-button" href="{% url 'delete-user' %}">Delete</a>
+        </div>
+    </section>
 
 </body>
 </html>
