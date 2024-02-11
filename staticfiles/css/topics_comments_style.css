@@ -16,8 +16,9 @@ body {
 
 header {
     display: flex;
-    padding: 1.2em 10em;
+    padding: 1.2em 3em;
     align-items: center;
+    justify-content: center;
     font-size: 1.5em;
     border-bottom: solid;
     border-color: rgba(255, 255, 255, 0.067);
@@ -219,7 +220,11 @@ main no-comments-article .no-comments-yet {
 }
 
 
-
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 8px;
+    }
+}
 
 
 

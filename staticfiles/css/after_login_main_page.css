@@ -16,13 +16,13 @@ body {
 
 header {
     display: flex;
-    padding: 1.2em 10em;
+    padding: 1.2em 3em;
     align-items: center;
+    justify-content: center;
     font-size: 1.5em;
     border-bottom: solid;
     border-color: rgba(255, 255, 255, 0.067);
     border-width: 0.1em;
-    position: sticky;
 }
 
 header img {
@@ -196,6 +196,14 @@ main article h6 {
 main article p {
     font-size: 1.3em;
     margin: 1.3em 1em;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 8px;
+    }
 }
 
 
