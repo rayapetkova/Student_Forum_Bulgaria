@@ -82,22 +82,20 @@ WSGI_APPLICATION = 'Student_Forum_Bulgaria.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-
-if not DEBUG:
-    DATABASES = {
-        "default": dj_database_url.config(default="postgres://student_forum_user:PnIbEWukcueLqKhqeJUSt9LbY36aaHXg@dpg-cn73rkmct0pc738s2fd0-a.frankfurt-postgres.render.com/student_forum")
-    }
-if DEBUG:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": config('DB_NAME'),
-            "USER": config('DB_USER'),
-            "PASSWORD": config('DB_PASSWORD'),
-            "HOST": "127.0.0.1",
-            "PORT": "5432",
-        }
-    }
+DATABASES = {
+    "default": dj_database_url.config(default="postgres://student_forum_user:PnIbEWukcueLqKhqeJUSt9LbY36aaHXg@dpg-cn73rkmct0pc738s2fd0-a.frankfurt-postgres.render.com/student_forum")
+}
+# if DEBUG:
+#     DATABASES = {
+#         "default": {
+#             "ENGINE": "django.db.backends.postgresql",
+#             "NAME": config('DB_NAME'),
+#             "USER": config('DB_USER'),
+#             "PASSWORD": config('DB_PASSWORD'),
+#             "HOST": "127.0.0.1",
+#             "PORT": "5432",
+#         }
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
