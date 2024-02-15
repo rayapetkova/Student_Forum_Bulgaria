@@ -1,0 +1,306 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:rgb(7 14 39);
+    margin: 0;
+    font-family: "Century Gothic";
+    font-size: 12px;
+    margin-bottom: 5%;
+}
+
+
+
+
+
+
+header {
+    display: flex;
+    padding: 1.2em 3em;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    border-bottom: solid;
+    border-color: rgba(255, 255, 255, 0.067);
+    border-width: 0.1em;
+}
+
+header img {
+    width: 3em;
+    height: 3em;
+}
+
+header p a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav .nav-links {
+    display: flex;
+    gap: 2em;
+
+}
+
+header nav .nav-links li {
+    list-style: none;
+}
+
+header nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav .nav-links li a:hover {
+    color: rgba(255, 255, 255, 0.69);
+}
+
+header button {
+    background-color: rgb(22 32 68);
+    border-style: none;
+    border-radius: 0.2em;
+    padding: 0.5em 0.5em;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: rgb(72, 83, 121);
+}
+
+header button a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.595);
+}
+
+header button:hover a {
+    color: rgb(7, 11, 24);
+}
+
+i {
+    color: rgba(255, 255, 255, 0.595);
+    margin-left: 0.7em;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+main > img {
+    width: 30%;
+    margin-left: auto;
+}
+
+main .search-bar {
+    display: flex;
+}
+
+main h3, main h4 {
+    font-size: 2.5em;
+    color: rgba(255, 255, 255, 0.521);
+}
+
+main .search-bar button {
+    padding: 0em;
+    background-color: rgb(22 32 68);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.595);
+    border-radius: 0.5em;
+    padding: 0.2em;
+}
+
+main .search-bar button:hover {
+    cursor: pointer;
+    background-color: #536a8290;
+}
+
+main .search-bar button img {
+    width: 1.5em;
+}
+
+main .search-bar input {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.595);
+    border-radius: 0.5em;
+    width: 60%;
+}
+
+main h4 {
+    font-size: 1.6em;
+}
+
+main .comment-section{
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+main .comment-section a {
+    background-color: rgba(255, 255, 255, 0.521);
+    margin-left: auto;
+    text-align: center;
+    padding: 0.8em 1em;
+    border-radius: 2em;
+}
+
+main .comment-section a:hover {
+    background-color: rgba(183, 183, 183, 0.52);
+}
+
+main .comment-section a i {
+    color:rgb(7 14 39);
+}
+
+main article {
+    background-color: rgb(61, 71, 110);
+    margin-bottom: 2.5em;
+    width: 75%;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0.595);
+    color: rgba(255, 255, 255, 0.595);
+}
+
+main article.main-question {
+    margin-top: 2em;
+}
+
+main article.main-question:hover {
+    background-color: #9bc5ef91;
+    color: rgb(7 14 39);
+}
+
+main article.main-question h6 {
+    font-size: 2.3em;
+    margin: 0.5em 0.5em;
+}
+
+main article p {
+    margin: 1.3em 1.3em;
+}
+
+main article:not(.main-question) {
+    width: 70%;
+    align-self: center;
+    border-radius: 3px;
+    background-color: rgb(31 40 73);
+    border-style: none;
+}
+
+
+
+
+main .no-comments-article {
+    display: flex;
+    justify-content: center;
+}
+
+main .no-comments-article .no-comments-yet {
+    color: rgba(255, 255, 255, 0.521);
+}
+
+
+
+
+
+
+
+div.line-break-sections {
+    background-color: rgba(255, 255, 255, 0.521);
+    width: 100%;
+    height: 1px;
+    margin-top: 8%;
+}
+
+
+
+
+
+
+
+section.about-us {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 8em auto 0 auto;
+}
+
+section.about-us h3 {
+    align-self: center;
+}
+
+section.about-us h3, section.about-us p{
+    color: rgba(255, 255, 255, 0.521);
+}
+
+section.about-us h3 {
+    font-size: 3em;
+}
+
+section.about-us p {
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
+section.about-us p span {
+    font-weight: 600;
+}
+
+section.about-us .regards, section.about-us .regards p {
+    line-height: 0.6em;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+/* .main-info .social-media-links {
+    display: flex;
+    flex-direction: column;
+    width: 6%;
+    background-color: #e2e9ef;
+}
+
+.main-info .social-media-links img {
+    width: 40px;
+} */
+
