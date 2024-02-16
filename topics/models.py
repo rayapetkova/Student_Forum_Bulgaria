@@ -23,6 +23,9 @@ class Subject(models.Model):
         default="This subject doesn't have a description yet."
     )
 
+    def __str__(self):
+        return self.name
+
 
 class Topic(models.Model):
 
@@ -53,6 +56,9 @@ class Topic(models.Model):
         on_delete=models.CASCADE
     )
 
+    def __str__(self):
+        return self.name
+
 
 class Comment(models.Model):
 
@@ -72,3 +78,6 @@ class Comment(models.Model):
         to=AppUser,
         on_delete=models.CASCADE
     )
+
+    def __str__(self):
+        return self.comment_text
