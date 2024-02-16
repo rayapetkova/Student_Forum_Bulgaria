@@ -40,18 +40,9 @@
 
     <main>
 
-
-        <div>
-            <h3>Subjects</h3>
-
-            <div class="search-bar">
-                <input type="text" placeholder="Search subject...">
-                <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/OOjs_UI_icon_search-ltr-progressive.svg/2048px-OOjs_UI_icon_search-ltr-progressive.svg.png" alt=""></button>
-            </div>
-        </div>
-
         <article class="main-question">
             <h6>{{ topic.name }}</h6>
+            <p class="topic-desc">{{ topic.description }}</p>
             <p>Author: {{ topic.user.profileuser.first_name}} {{ topic.user.profileuser.last_name }} </p>
         </article>
 

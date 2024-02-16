@@ -18,10 +18,12 @@ class LoginUser(auth_views.LoginView):
         result = super().form_valid(form)
 
         permission = Permission.objects.get(codename='add_topic')
-        user = UserModel.objects.get(email=form.cleaned_data['email'])
+        user = UserModel.objects.get(email=form.cleaned_data['username'])
 
-        if user.is_superuser():
+        if user.is_superuser:
             user.user_permissions.add(permission)
+
+        return result
 
 
 class RegisterUser(CreateView):

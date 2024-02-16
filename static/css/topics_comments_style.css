@@ -187,6 +187,7 @@ main article {
 
 main article.main-question {
     margin-top: 2em;
+    padding: 0 1.1em;
 }
 
 main article.main-question:hover {
@@ -196,11 +197,16 @@ main article.main-question:hover {
 
 main article.main-question h6 {
     font-size: 2.3em;
-    margin: 0.5em 0.5em;
+    margin: 0.5em 0em;
+}
+
+main article.main-question p.topic-desc {
+    font-size: 1.5em;
+    margin: 1em 0em;
 }
 
 main article p {
-    margin: 1.3em 1.3em;
+    margin: 1.3em 0em;
 }
 
 main article:not(.main-question) {
