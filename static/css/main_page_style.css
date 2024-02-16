@@ -108,6 +108,7 @@ section .left-side {
     color: rgba(255, 255, 255, 0.521);
     margin-left: 5%;
     margin-top: 2%;
+    margin-right: 2%;
     flex-wrap: wrap;
     width: 40%;
 }
@@ -159,6 +160,8 @@ section .right-side img {
     height: 50em;
     width: 100%;
     border-top-left-radius: 1em;
+    border-bottom-left-radius: 0.4em;
+    box-shadow: 0 0 50px white;
 }
 
 
@@ -232,7 +235,7 @@ section.about-us .regards, section.about-us .regards p {
     }
 
     section .right-side img {
-        width: 45em;
+        width: 55em;
         margin-top: 4em;
         border-radius: 1em;
     }
@@ -242,5 +245,9 @@ section.about-us .regards, section.about-us .regards p {
         margin-top: 5%;
         flex-wrap: wrap;
         width: 70%;
+    }
+
+    section.about-us {
+        width: 80%;
     }
 }
