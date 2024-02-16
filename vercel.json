@@ -7,10 +7,11 @@
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.10" }
     },
     {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
+      "src": "project/wsgi.py",
+      "use": "@vercel/python",
       "config": {
-        "distDir": "staticfiles_build"
+        "runtime": "python3.10",
+        "maxLambdaSize": "15mb"
       }
     }
   ],
