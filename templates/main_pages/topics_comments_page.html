@@ -30,7 +30,7 @@
         </nav>
 
         <button><a href="{% url 'logout-user' %}">Log Out</a></button>
-        {% if not requet.user.is_superuser %}
+        {% if not request.user.is_superuser %}
             <a href="{% url 'details-user' %}"><i class="fa-solid fa-user"></i></a>
         {% endif %}
 

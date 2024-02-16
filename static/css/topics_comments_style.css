@@ -162,7 +162,7 @@ main .comment-section a {
     background-color: rgba(255, 255, 255, 0.521);
     margin-left: auto;
     text-align: center;
-    padding: 0.8em 1em;
+    padding: 0.9em 1em;
     border-radius: 2em;
 }
 
@@ -172,6 +172,7 @@ main .comment-section a:hover {
 
 main .comment-section a i {
     color:rgb(7 14 39);
+    margin: 0;
 }
 
 main article {
