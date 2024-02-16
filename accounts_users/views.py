@@ -26,7 +26,6 @@ class RegisterUser(CreateView):
         permission = Permission.objects.get(codename='add_topic')
         user = UserModel.objects.get(email=form.cleaned_data['email'])
 
-        # print("EI TUKA BE")
         # print(user)
         # print(permission)
         # print(form.cleaned_data)
