@@ -234,6 +234,7 @@ section.about-us .regards, section.about-us .regards p {
     section .right-side img {
         width: 45em;
         margin-top: 4em;
+        border-radius: 1em;
     }
 
     section .left-side {
