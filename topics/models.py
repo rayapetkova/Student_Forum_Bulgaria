@@ -62,8 +62,7 @@ class Topic(models.Model):
 
 class Comment(models.Model):
 
-    comment_text = models.CharField(
-        max_length=350,
+    comment_text = models.TextField(
         validators=[
             validators.MinLengthValidator(2)
         ]
