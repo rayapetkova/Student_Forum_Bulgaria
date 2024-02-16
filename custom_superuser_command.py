@@ -9,5 +9,5 @@ from django.contrib.auth import get_user_model
 
 UserModel = get_user_model()
 
-if not UserModel.objects.filter(email='student_forum_superuser').exists():
-    UserModel.objects.create_superuser(email='student_forum_superuser', password="studentFF123!")
+if not UserModel.objects.filter(email='student_forum_superuser@hotmail.com').exists():
+    UserModel.objects.create_superuser(email='student_forum_superuser@hotmail.com', password="studentFF123!")
