@@ -14,6 +14,15 @@ class LoginUser(auth_views.LoginView):
     template_name = 'accounts/login_page.html'
     form_class = LoginUserForm
 
+    def form_valid(self, form):
+        result = super().form_valid(form)
+
+        permission = Permission.objects.get(codename='add_topic')
+        user = UserModel.objects.get(email=form.cleaned_data['email'])
+
+        if user.is_superuser():
+            user.user_permissions.add(permission)
+
 
 class RegisterUser(CreateView):
     template_name = 'accounts/register_page.html'

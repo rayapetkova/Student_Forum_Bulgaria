@@ -44,6 +44,12 @@
             <section class="no-topics-section">
                 <h3>Topics</h3>
                 <div class="no-topics">No topics yet</div>
+
+                {% if perms.topics.add_topic %}
+                    <div class="add-button">
+                        <a href="{% url 'add-new-topic' subject_id=subject_id user_id=request.user.id %}"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                {% endif %}
             </section>
         {% else %}
 

@@ -67,14 +67,11 @@
 
         {% else %}
             {% for comment in comments %}
-
                 <article>
                     <p>{{ comment.comment_text }}</p>
                     <p>{{ comment.user.profileuser.first_name }} {{ comment.user.profileuser.last_name }}</p>
                 </article>
-
             {% endfor %}
-
         {% endif %}
 
         <!-- <img src="blue_wave.png" alt="blue-wave" class="blue-wave-"> -->
