@@ -132,7 +132,7 @@ main .search-bar-and-add {
     margin-bottom: -3em;
 }
 
-main .search-bar-and-add .add-button {
+.add-button {
     display: flex;
     justify-content: center;
     margin: 0;
