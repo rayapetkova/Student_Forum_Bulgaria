@@ -29,11 +29,13 @@
 
         </nav>
 
-        {% if not request.user.is_authenticated %}
+{% if not request.user.is_authenticated %}
             <button><a href="{% url 'register-user' %}">Sign Up</a></button>
         {% else %}
             <button><a href="{% url 'logout-user' %}">Log Out</a></button>
-            <a href="{% url 'details-user' %}"><i class="fa-solid fa-user"></i></a>
+            {% if not request.user.is_superuser %}
+                <a href="{% url 'details-user' %}"><i class="fa-solid fa-user"></i></a>
+            {% endif %}
         {% endif %}
 
     </header>

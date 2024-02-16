@@ -224,9 +224,15 @@ section.about-us .regards, section.about-us .regards p {
         flex-direction: column;
     }
 
+    section .right-side {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-self: center;
+    }
+
     section .right-side img {
-        width: 70em;
-        margin-left: 15%;
+        width: 45em;
         margin-top: 4em;
     }
 
