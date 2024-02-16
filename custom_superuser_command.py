@@ -1,15 +1,16 @@
-from django.contrib.auth import get_user_model
+import os
+import django
+
+# Set up Django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Student_Forum_Bulgaria.settings")
+django.setup()
+
 from django.core.management.base import BaseCommand
+
+from django.contrib.auth import get_user_model
 
 UserModel = get_user_model()
 
 
-class Command(BaseCommand):
-    help = 'Automatically creates a superuser'
-
-    def handle(self, *args, **kwargs):
-        if not UserModel.objects.filter(username='admin').exists():
-            UserModel.objects.create_superuser(email='student_forum_superuser', password="studentFF123!")
-            self.stdout.write(self.style.SUCCESS('Superuser created successfully'))
-        else:
-            self.stdout.write(self.style.WARNING('Superuser already exists'))
+if not UserModel.objects.filter(email='student_forum_superuser').exists():
+    UserModel.objects.create_superuser(email='student_forum_superuser', password="studentFF123!")
