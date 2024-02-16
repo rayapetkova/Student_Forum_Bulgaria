@@ -57,7 +57,7 @@ class Topic(models.Model):
     )
 
     def __str__(self):
-        return self.name
+        return f"{self.subject.name} - {self.name}"
 
 
 class Comment(models.Model):
