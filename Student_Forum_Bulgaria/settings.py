@@ -26,12 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c)sp)zcbo&0w%dhl99##8rk08ne2^ap^@3k1s5*&4#697_zlfv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    'student-forum-c3up.onrender.com'
+    # 'localhost',
+    # '127.0.0.1',
+    # 'student-forum-c3up.onrender.com'
+    '*',
 ]
 
 # Application definition
@@ -84,9 +85,14 @@ WSGI_APPLICATION = 'Student_Forum_Bulgaria.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     "default": dj_database_url.config(default="postgres://student_forum_user:PnIbEWukcueLqKhqeJUSt9LbY36aaHXg@dpg-cn73rkmct0pc738s2fd0-a.frankfurt-postgres.render.com/student_forum")
+# }
+
 DATABASES = {
-    "default": dj_database_url.config(default="postgres://student_forum_user:PnIbEWukcueLqKhqeJUSt9LbY36aaHXg@dpg-cn73rkmct0pc738s2fd0-a.frankfurt-postgres.render.com/student_forum")
+    "default": dj_database_url.config(default="postgres://postgres.isvhzniskkjuuudcqnyl:studentFF123!D@aws-0-eu-central-1.pooler.supabase.com:5432/postgres")
 }
+
 # if DEBUG:
 #     DATABASES = {
 #         "default": {
