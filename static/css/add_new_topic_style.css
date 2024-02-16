@@ -224,6 +224,10 @@ section.about-us .regards, section.about-us .regards p {
     body {
         font-size: 8px;
     }
+
+    section.about-us {
+        width: 80%;
+    }
 }
 
 

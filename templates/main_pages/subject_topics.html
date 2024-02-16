@@ -68,7 +68,7 @@
                 <article>
                     <a href="{% url 'topic-comments' topic_id=topic.id %}">
                         <h6>{{ topic.name }}</h6>
-                        <p>Author: {{ topic.user.profileuser.first_name }} {{ topic.user.profileuser.last_name }}</p>
+                        <p>Author: {{ topic.user.profileuser.first_name }} {{ topic.user.profileuser.last_name }} <span>/{{ topic.user.profileuser.role.lower }}/</span></p>
                     </a>
                 </article>
 

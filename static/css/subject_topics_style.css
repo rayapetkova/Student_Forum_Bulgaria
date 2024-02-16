@@ -176,6 +176,7 @@ main article {
     border-radius: 10px;
     border-color: rgba(255, 255, 255, 0.595);
     color: rgba(255, 255, 255, 0.595);
+    padding: 0.4em 2em;
 }
 
 main article:hover {
@@ -191,11 +192,17 @@ main article a {
 
 main article h6 {
     font-size: 2.3em;
-    margin: 0.5em 0.5em;
+    margin: 0.5em 0em;
 }
 
 main article p {
-    margin: 1.3em 1.3em;
+    margin: 1em 0em;
+    font-size: 1.2em;
+}
+
+main article p span {
+    font-weight: 600;
+    color: rgba(203, 201, 201, 0.59);
 }
 
 
@@ -259,6 +266,10 @@ section.about-us .regards, section.about-us .regards p {
 @media screen and (max-width: 600px) {
     body {
         font-size: 8px;
+    }
+
+    section.about-us {
+        width: 80%;
     }
 }
 

@@ -89,7 +89,7 @@ header button:hover a {
 
 
 
-section {
+section.details-profile {
     display: flex;
     background-color: rgb(32 41 78);
     flex-direction: column;
@@ -104,7 +104,7 @@ section {
     border-width: 0.2em;
 }
 
-section h2 {
+section.details-profile h2 {
     align-self: center;
     color: rgba(255, 255, 255, 0.521);
     font-size: 3em;
@@ -112,23 +112,23 @@ section h2 {
     margin: 0.3em;
 }
 
-section p {
+section.details-profile p {
     font-size: 1.5em;
     color: rgba(183, 182, 182, 0.59);
 }
 
-section p span {
+section.details-profile p span {
     font-weight: 600;
 }
 
-section .buttons {
+section.details-profile .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3em;
 }
 
-section a {
+section.details-profile a {
     width: 55%;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
@@ -183,7 +183,7 @@ section.about-us {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 8em auto 0 auto;
+    margin: 8em auto 8em auto;
 }
 
 section.about-us h3 {
@@ -218,6 +218,10 @@ section.about-us .regards, section.about-us .regards p {
 @media screen and (max-width: 600px) {
     body {
         font-size: 8px;
+    }
+
+    section.about-us {
+        width: 80%;
     }
 }
 

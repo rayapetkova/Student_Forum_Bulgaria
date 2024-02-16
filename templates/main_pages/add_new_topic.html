@@ -1,3 +1,4 @@
+{% load custom_filters %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -47,8 +48,8 @@
         <p class="subject-name">{{ subject_name }}</p>
 
         <section class="input-fields">
-            {{ form.name }}
-            {{ form.description }}
+            {{ form.name|placeholder:"Title" }}
+            {{ form.description|placeholder:"Description" }}
         </section>
 
         <button>

@@ -60,7 +60,7 @@
             {% for comment in comments %}
                 <article>
                     <p>{{ comment.comment_text }}</p>
-                    <p>{{ comment.user.profileuser.first_name }} {{ comment.user.profileuser.last_name }}</p>
+                    <p class="author">{{ comment.user.profileuser.first_name }} {{ comment.user.profileuser.last_name }} <span>/{{ comment.user.profileuser.role.lower }}/</span></p>
                 </article>
             {% endfor %}
         {% endif %}

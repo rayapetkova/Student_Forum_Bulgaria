@@ -212,7 +212,7 @@ section.about-us {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 8em auto 0 auto;
+    margin: 8em auto 8em auto;
 }
 
 section.about-us h3 {
@@ -248,6 +248,10 @@ section.about-us .regards, section.about-us .regards p {
 @media screen and (max-width: 600px) {
     body {
         font-size: 8px;
+    }
+
+    section.about-us {
+        width: 80%;
     }
 }
 

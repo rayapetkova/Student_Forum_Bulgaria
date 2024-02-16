@@ -216,6 +216,19 @@ main article:not(.main-question) {
     border-radius: 3px;
     background-color: rgb(31 40 73);
     border-style: none;
+    padding: 0.2em 2em;
+}
+
+main article:not(.main-question) p {
+    font-size: 1.2em;
+}
+
+main article:not(.main-question) p.author {
+    font-weight: 600;
+}
+
+main article:not(.main-question) p.author span {
+    color: rgba(203, 201, 201, 0.59);
 }
 
 
@@ -290,6 +303,10 @@ section.about-us .regards, section.about-us .regards p {
 @media screen and (max-width: 600px) {
     body {
         font-size: 8px;
+    }
+
+    section.about-us {
+        width: 80%;
     }
 }
 

@@ -98,7 +98,7 @@ i {
 
 
 
-section {
+section.delete-profile {
     display: flex;
     background-color: rgb(32 41 78);
     flex-direction: column;
@@ -113,7 +113,7 @@ section {
     border-width: 0.2em;
 }
 
-section h2 {
+section.delete-profile h2 {
     align-self: center;
     color: rgba(255, 255, 255, 0.521);
     font-size: 3em;
@@ -122,7 +122,7 @@ section h2 {
     text-align: center;
 }
 
-section {
+section.delete-profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,17 +130,17 @@ section {
     gap: 1em;
 }
 
-section button {
+section.delete-profile button {
     border-style: none;
     width: 20em;
     background-color: rgb(45, 56, 100);
 }
 
-section button:hover {
+section.delete-profile button:hover {
     background-color: rgb(101, 113, 162);
 }
 
-section button, section a {
+section.delete-profile button, section a {
     width: 55%;
     padding: 0.3em 1em;
     margin-top: 0.7em;
@@ -155,29 +155,29 @@ section button, section a {
     font-weight: 600;
 }
 
-section form {
+section.delete-profile form {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section form button {
+section.delete-profile form button {
     margin: 0;
     width: 100%;
     font-size: 1.5em;
 }
 
-section a:hover {
+section.delete-profile a:hover {
     background-color: rgb(130, 140, 178);
 }
 
-section a.cancel-button {
+section.delete-profile a.cancel-button {
     background-color: rgb(32 41 78);
     color: rgba(255, 255, 255, 0.521);
     border-color: rgba(129, 128, 128, 0.52);
 }
 
-section a.cancel-button:hover {
+section.delete-profile a.cancel-button:hover {
     background-color: rgb(43, 53, 94);
 }
 
@@ -205,7 +205,7 @@ section.about-us {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 8em auto 0 auto;
+    margin: 8em auto 8em auto;
 }
 
 section.about-us h3 {
@@ -241,6 +241,10 @@ section.about-us .regards, section.about-us .regards p {
 @media screen and (max-width: 600px) {
     body {
         font-size: 8px;
+    }
+
+    section.about-us {
+        width: 80%;
     }
 }
 

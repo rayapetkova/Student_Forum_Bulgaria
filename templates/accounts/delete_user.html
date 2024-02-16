@@ -29,7 +29,7 @@
 
         </nav>
 
-{% if not request.user.is_authenticated %}
+        {% if not request.user.is_authenticated %}
             <button><a href="{% url 'register-user' %}">Sign Up</a></button>
         {% else %}
             <button><a href="{% url 'logout-user' %}">Log Out</a></button>
@@ -40,7 +40,7 @@
 
     </header>
 
-    <section>
+    <section class="delete-profile">
         <h2>Are you sure you want to delete this profile?</h2>
         <form method="POST" action="{% url 'delete-user' %}">
             {% csrf_token %}
