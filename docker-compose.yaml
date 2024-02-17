@@ -1,18 +1,31 @@
+# Docker API version
 version: '3'
+
+# Services = Containers, each service is a separate container which will be deployed after we execute the docker-compose file
 services:
   db:
-    image: postgres
-    container_name: student-forum-db
+    image: postgres # Which image we will use / Docker will find it by itself in DocherHub
+    container_name: student-forum-db # Optional: The container's name
+    restart: always # Optional(recommended) - What will happen if the Docker Engine OR The Host VM is restarted. IF always, the container will start autamatically
+    environment: # Specific ENV VARIABLES
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_PASSWORD=raya5432
+      - POSTGRES_USER=raya_postgres
+      - POSTGRES_DB=student_forum_database
+    ports: # Ports forwarding (the left one means the container's port, the right one is which host port to forward)
+      - '5433:5432'
+    volumes: # Optional(recommended_) Directory sharing
+      - /student_db:/var/lib/postgresql/data
+  
+  student_forum:
+    build: . # Using Dockerfile
+    command: gunicorn --bind 0.0.0.0:8080 Student_Forum_Bulgaria.wsgi:application
     restart: always
-  environment:
-    - DB_USER=${DB_USER}
-    - DB_PASSWORD=${DB_PASSWORD}
-    - DB_NAME=${DB_NAME}
-  ports:
-    - '5433:5432'
-  volumes:
-    - student_db:/var/lib/postgresql/data
+    ports:
+      - '8080:8080'
 
 volumes:
   db:
+    driver: local
+  student_forum:
     driver: local
