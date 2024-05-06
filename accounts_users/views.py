@@ -82,10 +82,8 @@ class DeleteProfile(DeleteView):
     def get_object(self, queryset=None):
         return UserModel.objects.get(id=self.request.user.id)
 
-
 # class LogOutUser(auth_views.LogoutView):
 #     template_name = 'accounts/logout_page.html'
-
 
 def logout_user(request):
     logout(request)
