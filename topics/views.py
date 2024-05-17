@@ -66,7 +66,10 @@ class CreateNewTopic(CreateView):
 
     template_name = 'main_pages/add_new_topic.html'
     form_class = AddNewTopicForm
-    success_url = reverse_lazy('subjects-list')
+
+    # When the user successfully creates a comment he is redirected to a success page
+    def get_success_url(self):
+        return reverse_lazy('subject-topics', kwargs={'subject_id': self.kwargs['subject_id']})
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
