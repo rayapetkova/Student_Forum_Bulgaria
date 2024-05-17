@@ -23,8 +23,8 @@ def main_page(request):
 
 
 def subject_topics(request, subject_id):
-
-    current_subject_topics = Topic.objects.filter(subject_id=subject_id)
+    # Get the topics in descending order by the id (the last added topic is the first one)
+    current_subject_topics = Topic.objects.filter(subject_id=subject_id).order_by('-id')
 
     context = {
         'subject_id': subject_id,
@@ -43,7 +43,8 @@ def subject_topics(request, subject_id):
 def topic_comments(request, topic_id):
 
     curr_topic = Topic.objects.get(id=topic_id)
-    current_topic_comments = Comment.objects.filter(topic_id=topic_id)
+    # Get the comments in descending order by the id (the last added comment is the first one)
+    current_topic_comments = Comment.objects.filter(topic_id=topic_id).order_by('-id')
 
     context = {
         'topic': curr_topic,
@@ -71,14 +72,15 @@ class CreateNewTopic(CreateView):
     def get_success_url(self):
         return reverse_lazy('subject-topics', kwargs={'subject_id': self.kwargs['subject_id']})
 
+    # Add context that can be used in the template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
         # print(str(self.request.META['HTTP_REFERER']))
-
-        matched_subject_id = re.findall(r'\d{1,}\/$', str(self.request.META['HTTP_REFERER']))
+        # matched_subject_id = re.findall(r'\d{1,}\/$', str(self.request.META['HTTP_REFERER']))
         # print(int(matched_subject_id[0][:-1]))
-        subject_id = int(matched_subject_id[0][:-1])
+
+        subject_id = self.kwargs['subject_id']
 
         subject = Subject.objects.get(id=subject_id)
 
@@ -87,6 +89,7 @@ class CreateNewTopic(CreateView):
 
         return context
 
+    # Check if the form is valid
     def form_valid(self, form):
         subject_id = self.kwargs['subject_id']
         user_id = self.kwargs['user_id']
