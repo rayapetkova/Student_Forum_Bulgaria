@@ -98,8 +98,11 @@ class CreateNewComment(CreateView):
 
     template_name = 'main_pages/add_new_comment.html'
     form_class = AddNewCommentForm
-    success_url = reverse_lazy('subjects-list')
 
+    def get_success_url(self):
+        return reverse_lazy('topic-comments', kwargs={'topic_id': self.kwargs['topic_id']})
+
+    # Add context that can be used in the template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
