@@ -99,6 +99,7 @@ class CreateNewComment(CreateView):
     template_name = 'main_pages/add_new_comment.html'
     form_class = AddNewCommentForm
 
+    # When the user successfully creates a comment he is redirected to a success page
     def get_success_url(self):
         return reverse_lazy('topic-comments', kwargs={'topic_id': self.kwargs['topic_id']})
 
@@ -106,9 +107,10 @@ class CreateNewComment(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        matched_topic_id = re.findall(r'\d{1,}\/$', str(self.request.META['HTTP_REFERER']))
-        topic_id = int(matched_topic_id[0][:-1])
+        # matched_topic_id = re.findall(r'\d{1,}\/$', str(self.request.META['HTTP_REFERER']))
+        # topic_id = int(matched_topic_id[0][:-1])
 
+        topic_id = self.kwargs['topic_id']
         topic = Topic.objects.get(id=topic_id)
 
         context['topic_id'] = topic.id
@@ -118,6 +120,7 @@ class CreateNewComment(CreateView):
 
         return context
 
+    # Check if the form is valid
     def form_valid(self, form):
         topic_id = self.kwargs['topic_id']
         user_id = self.kwargs['user_id']
