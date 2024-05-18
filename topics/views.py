@@ -89,7 +89,7 @@ class CreateNewTopic(CreateView):
 
         return context
 
-    # Check if the form is valid
+    # Check if the form is valid and set subject_id and user_id to the form instance
     def form_valid(self, form):
         subject_id = self.kwargs['subject_id']
         user_id = self.kwargs['user_id']
@@ -126,7 +126,7 @@ class CreateNewComment(CreateView):
 
         return context
 
-    # Check if the form is valid
+    # Check if the form is valid and set topic_id and user_id to the form instance
     def form_valid(self, form):
         topic_id = self.kwargs['topic_id']
         user_id = self.kwargs['user_id']
