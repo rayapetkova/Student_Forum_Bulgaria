@@ -7,6 +7,7 @@ from accounts_users.models import AppUser
 class Subject(models.Model):
 
     name = models.CharField(
+        max_length=50,
         validators=[
             validators.MinLengthValidator(2)
         ],
@@ -15,6 +16,7 @@ class Subject(models.Model):
     )
 
     description = models.CharField(
+        max_length=280,
         validators=[
             validators.MinLengthValidator(2)
         ],
@@ -30,6 +32,7 @@ class Subject(models.Model):
 class Topic(models.Model):
 
     name = models.CharField(
+        max_length=150,
         validators=[
             validators.MinLengthValidator(2)
         ],
