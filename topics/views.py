@@ -23,7 +23,7 @@ def main_page(request):
 
 
 def subject_topics(request, subject_id):
-    # Get the topics in descending order by the id (the last added topic is the first one)
+    # Get the topics in descending order by the id (the last added topic is the first one in the template)
     current_subject_topics = Topic.objects.filter(subject_id=subject_id).order_by('-id')
 
     context = {
