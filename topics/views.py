@@ -76,6 +76,7 @@ class CreateNewTopic(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
+        # This is not needed because we can get the subject_id easily with self.kwargs
         # print(str(self.request.META['HTTP_REFERER']))
         # matched_subject_id = re.findall(r'\d{1,}\/$', str(self.request.META['HTTP_REFERER']))
         # print(int(matched_subject_id[0][:-1]))
