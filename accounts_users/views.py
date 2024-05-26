@@ -90,4 +90,3 @@ class DeleteProfile(DeleteView):
 def logout_user(request):
     logout(request)
     return redirect('login-user')
-
